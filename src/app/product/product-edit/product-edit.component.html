@@ -1,0 +1,19 @@
+<h1>Sua san pham</h1>
+<a routerLink="/">Danh sach san pham</a>
+<form (ngSubmit)="update()" [formGroup]="productForm">
+  <div>
+    <label for="name">Ten san pham</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+  <div>
+    <label for="price">Gia san pham</label>
+    <input type="text" id="price" formControlName="price">
+  </div>
+  <div>
+    <label for="description">Mo ta san pham</label>
+    <input type="text" id="description" formControlName="description">
+  </div>
+  <div>
+    <button>Update</button>
+  </div>
+</form>

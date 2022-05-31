@@ -1,0 +1,21 @@
+<h1>Danh sach san pham</h1>
+<a routerLink="/create">Tao moi san pham</a>
+<br>
+<table>
+  <tr>
+    <th>Stt</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  <tr *ngFor="let product of products; index as i">
+    <td>{{i+1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td><a routerLink="/edit{{product.id}}">Edit</a></td>
+    <td><a routerLink="/delete{{product.id}}">Delete</a></td>
+  </tr>
+</table>
